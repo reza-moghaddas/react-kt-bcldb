@@ -15,7 +15,7 @@ export default function MyApp1() {
         }}
       >
         <WelcomePanel />
-        {/* <label>
+        <label>
           <input
             type="checkbox"
             checked={theme === 'dark'}          
@@ -25,16 +25,17 @@ export default function MyApp1() {
             }}
           />
           Use dark mode
-        </label> */}
+        </label>
       </CurrentUserContext.Provider>
     </ThemeContext.Provider>
   )
 }
 
 function WelcomePanel({ children }) {
-  const {currentUser, theme , setTheme} = useContext(CurrentUserContext);
+  const { currentUser, theme, setTheme } = useContext(CurrentUserContext);
+  const style = 'panel-' + theme;
   return (
-    <Panel title="Welcome">
+    <Panel title="Welcome" className={style}>
       {currentUser !== null ?
         <Greeting /> :
         <LoginForm />
@@ -90,7 +91,7 @@ function LoginForm() {
 
 function Panel({ title, children }) {
   const theme = useContext(ThemeContext);
-  const className = 'panel-' + theme;
+  const className =  theme;
   return (
     <section className={className}>
       <h1>{title}</h1>

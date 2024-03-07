@@ -14,7 +14,7 @@ function Test(props) {
         async function loadUsers() {
             try {
                 console.log('Effect runs for the first load');
-                const res = await fetch('https://jsonplceholder.typicode.com/users');
+                const res = await fetch('https://jsonplaceholder.typicode.com/users');
                 const json = await res.json();
                 console.log(json);
                 SetError(false);
