@@ -21,7 +21,7 @@ function MemoComponent() {
     
     const handleNumberClick = useCallback(() => {
         setNumber(number => number + 1);
-    },[]);
+    },[number]);
   return (
       <div>
           <h2>MemoComponent</h2>

@@ -1,22 +1,21 @@
 import React, { useReducer } from 'react'
 
-function reducer(state, action) {
-    console.log({ state,action })
-        switch (action) {
+function mycustomfunction(state, action) {
+        switch (action.type) {
             case 'increment':
-                return state + 2;                
+                return state + action.incrementValue;                
             default:
                 return action;
         }
     }
 
 function ReducerComponent() {
-    const [state, dispatch] = useReducer(reducer, 10);
+    const [state, dispatch] = useReducer(mycustomfunction, 10);
   return (
       <div>
           <h2>ReducerComponent</h2>
           <button onClick={() => {
-              dispatch('increment')
+              dispatch({type:'increment',incrementValue:1})
           }}>+</button>
           <h3>{state}</h3>
 

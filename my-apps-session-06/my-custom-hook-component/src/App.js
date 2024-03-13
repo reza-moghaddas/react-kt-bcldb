@@ -4,6 +4,8 @@ import FirstComponent from './components/FirstComponent';
 import { Route, Routes } from 'react-router-dom';
 import SecondComponent from './components/SecondComponent';
 import Page from './components/Page';
+import NetworkStatus from './components/NetworkStatus';
+import SaveButton from './components/SaveButton';
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Page />} />
         <Route path='/first' element={<FirstComponent />} />
-        <Route path='/second' element={<SecondComponent />} />        
+        <Route path='/second' element={<SecondComponent />} />
+        <Route path='/network' element={<NetworkStatus />} />
+        <Route path='/savebtn' element={<SaveButton />} />
       </Routes>      
     </div>
   );
