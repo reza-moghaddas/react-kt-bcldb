@@ -16,6 +16,8 @@ function App() {
         <Route path='/second' element={<SecondComponent />} />
         <Route path='/network' element={<NetworkStatus />} />
         <Route path='/savebtn' element={<SaveButton />} />
+        <Route path='network' element={<NetworkStatus />} />
+        <Route path='/savebtn' element={<SaveButton />} />
       </Routes>      
     </div>
   );
