@@ -2,16 +2,16 @@ import React from 'react'
 import { useTitle } from '../hooks/useTitle'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
-function Page() {
+function PageTwo() {
   useTitle('Page title with Custom hook')
-  const [name, setName] = useLocalStorage('name', '');
+  const [family, setFamily] = useLocalStorage('family', '');
 
 
   return (
     <div>
-      <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
+      <input type='text' value={family} onChange={(e) => setFamily(e.target.value)} />
     </div>
   )
 }
 
-export default Page
+export default PageTwo

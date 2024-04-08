@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { useTitle } from '../hooks/useTitle'
 
 function FirstComponent() {
-
-  useEffect(() => {
-    document.title = 'First Component';
-  },[])
+  useTitle('First title custom Hook');
+  console.log('first re-render')
   return (
       <div>
           <h2>First Component</h2>
