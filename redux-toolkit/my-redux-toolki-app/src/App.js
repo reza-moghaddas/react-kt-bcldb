@@ -1,7 +1,7 @@
 import './App.css';
 import Counter from './components/Counter';
 import Number from './components/Number';
-import Users from './components/Users';
+import User from './components/User';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <h3>App</h3>
       <Counter />
       <Number />
-      <Users />
+      <User />
     </div>
   );
 }

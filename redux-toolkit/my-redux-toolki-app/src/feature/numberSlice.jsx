@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {increment as counterIncrement} from './counterSlice'
+import { increment as counterIncrement } from './counterSlice';
 
 
 const initialState = {
